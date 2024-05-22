@@ -1,0 +1,48 @@
+body{
+    margin:0;
+    padding:0;
+    background-color:#555;
+    height:100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    background-color: #222;
+    width:800px;
+    height:400px;
+    position: relative;
+}
+.clip{
+    position: absolute;
+    top:0;
+    left:0;
+     height:100%;
+    width:100%;
+    transition:all 1s;
+}
+.clip1{
+    background-image:url(GOJO.jpg);
+    background-size: cover;
+    background-position: center;
+    clip-path: polygon(0 0, 39% 1%, 18% 100%, 0% 100%);
+    
+}
+ .clip2{
+    background-image:url(wkd.jpg);
+    background-size: cover;
+    background-position: center;
+        clip-path: polygon(38% 0, 65% 0, 88% 100%, 16% 100%);
+}
+.clip3{
+    background-image:url(blue.eye.jpg);
+    background-size: cover;
+    background-position: center;
+      clip-path: polygon(66% 0, 100% 0, 100% 100%, 84% 100%);
+} 
+.container:hover .clip{
+    clip-path:polygon(100% 0, 100% 0,100% 100%,100% 100%)
+} 
+.container .clip:hover{
+    clip-path:polygon(0 0,100% 0,100% 100%,0 100%)
+}
